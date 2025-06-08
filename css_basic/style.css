@@ -17,7 +17,21 @@ article {
     flex: 2;
     overflow-y: auto;
 }
+article {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+}
+article h2 {
+  color: #ff4500;
+  font-style: italic;
+}
 
+article p {
+  line-height: 1.6;
+  text-align: justify;
+}
 /* 4. Aside takes 1 part of the horizontal space */
 aside {
     flex: 1;
