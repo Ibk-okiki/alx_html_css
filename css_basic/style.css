@@ -1,0 +1,25 @@
+/* 1. Tell body to use flexbox in a column layout */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Make body take full height of viewport */
+}
+
+/* 2. Make main a horizontal flex container */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* main takes up remaining space after header and footer */
+}
+
+/* 3. Article takes 2 parts of the horizontal space */
+article {
+    flex: 2;
+    overflow-y: auto;
+}
+
+/* 4. Aside takes 1 part of the horizontal space */
+aside {
+    flex: 1;
+    overflow-y: auto;
+}
