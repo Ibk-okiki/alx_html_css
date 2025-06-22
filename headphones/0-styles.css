@@ -1,127 +1,143 @@
-/* RESET CSS */
-*,
+@font-face {
+  font-family: 'source-pro';
+  src: url(Fonts/source-sans-pro/SourceSansPro-Regular.otf);
+}
+:root{
+  --text-color:#fff;
+  --primary-color:#FF6565;
+  --scondary-color:#071629;
+  --fs-lg:4.6rem;
+  --fs-md:3.2rem;
+  --fs-sm:1.6rem;
+}
+*::after,
 *::before,
-*::after {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'source-pro';
+  font-weight: 400;
 }
-
-/* VARIABLES */
-:root {
-  --primary-color: #FF6565;
-  --text-color: #fff;
-  --bg-dark: #1c1c1c;
-  --font-main: 'Source Sans Pro', sans-serif;
-  --max-width: 1000px;
+html{
+  font-size: 62.5%;
 }
-
-/* BASE STYLES */
-body {
-  font-family: var(--font-main);
-  background-color: var(--bg-dark);
-  color: var(--text-color);
-}
-
-a {
+a{
   text-decoration: none;
   color: var(--text-color);
+  display:inline-block;
 }
-
-a:hover,
-a:active {
-  color: var(--primary-color);
+img{
+  display: block;
 }
-
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* HERO SECTION */
-.hero {
-  background: url("../images/headphones_hero_1.jpg") no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-menu {
+ul{
   list-style: none;
-  display: flex;
-  gap: 2rem;
 }
-
-.hero-content {
-  margin-top: 100px;
-  max-width: 600px;
+/* === UTILITIES */
+.container{
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
 }
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
+.btn{
+  padding: 1.2rem 3.2rem;
+  text-transform: uppercase;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
+  border-radius: 3rem;
 
-.btn {
+}
+.btn--cta{
   background-color: var(--primary-color);
-  color: #fff;
-  padding: 0.8rem 2rem;
-  border: none;
-  font-size: 1rem;
+
+}
+/* ===END OF UTILITIES */
+/* === HEADER STYLES === */
+.header{
+  min-height: 100vh;
+  background: url(./images/background_1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+}
+.navbar__brand__open{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap:4rem;
+}
+.navbar__toggler{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 35px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
 }
-
-.btn:hover,
-.btn:active {
-  opacity: 0.9;
+.navbar__toggler .line{
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: .5rem;
+  transform: all .4s;
 }
-@media screen and (max-width: 480px) {
-  /* Responsive styles go here */
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .hero-content {
-    padding: 20px;
-  }
+.navbar__toggler .line.middle{
+  width: 25px;
 }
+.navbar__toggler.active .line.middle{
+  opacity: 0;
+}
+.navbar__toggler.active .line.top{
+  transform: translateY(10px) rotate(-45deg);
+}
+.navbar__toggler.active .line.bottom{
+  transform: translateY(-10px) rotate(45deg);
+}
+.navbar__brand{
+  width: 16rem;
+}
+.navbar__list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.navbar__link{
+  font-size: 1.2rem;
+}
+.navbar__list-item.active a{
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.intro__section{
 
+  max-width: 65rem;
+  width: 100%;
+  margin:15rem auto 0 auto;
+  text-align: center;
+  color: var(--text-color);
+}
+.intro__title{
+font-weight: 700;
+font-size: var(--fs-md);
+margin-bottom: 0.5rem;   
+}
+.intro__sub-title{
+  margin-bottom: 1rem; 
+  font-size: 1.2rem;  
+  margin-bottom: 3rem;
+
+}
+.intro__desc{
+  margin-top: 3rem;
+font-size: 1.6rem;
+line-height: 1.5;
+}
+/* === END OF HEADER STYLES === */
