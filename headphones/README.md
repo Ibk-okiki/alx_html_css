@@ -53,7 +53,17 @@ If these fonts are not installed on your system, you can download and add them t
 
 ## 🗂️ Project Structure
 
-alx_html_css/headphones/index.html/styles, style.css/fonts/SourceSansPro/SpinCycleOT/images/README.me
+alx_html_css/
+└── headphones/
+    ├── index.html
+    ├── styles/
+    │   └── style.css
+    ├── fonts/
+    │   ├── SourceSansPro/
+    │   └── SpinCycleOT/
+    ├── images/
+    └── README.md
+
 
 ## 👨🏽‍💻 Developer Notes
 
